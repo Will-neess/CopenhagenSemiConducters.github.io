@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC – Advanced Semiconductor Solutions</title>
+    <style>
+        body {
+             margin: 100px 10%;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .neon {
+            color: #1956ff;
+            text-shadow: 0 0 10px #5a19ff;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border-radius: 4px;
+            border: 1px solid #19AFFF;
+            color: #19AFFF;
+            background: transparent;
+            cursor: pointer;
+            transition: 0.2s ease;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #19AFFF;
+            color: #2A3F5F;
+        }
+
+        /* ------ HERO ------ */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(180deg, #93add3, #7ccca0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('https://scitechdaily.com/images/Advanced-Computer-Chip-Concept.gif');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        #hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(32, 28, 72, 0.85);
+        }
+
+        #hero .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-buttons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* ------ ABOUT ------ */
+        #about {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+        #about img {
+            width: 45%;
+            border-radius: 12px;
+            box-shadow: 0 0 20px #19AFFF55;
+        }
+
+        /* ------ TECHNOLOGY ------ */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .tech-card {
+            background: #1E3A52;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #19AFFF33;
+            transition: 0.2s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px #19AFFF55;
+        }
+
+        /* ------ INDUSTRIES ------ */
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .industry-card {
+            padding: 25px;
+            background: #1E3A52;
+            border-radius: 10px;
+            border: 1px solid #19AFFF33;
+            transition: 0.2s ease;
+        }
+
+        .industry-card:hover {
+            background: #132033;
+            box-shadow: 0 0 15px #19AFFF55;
+        }
+
+        /* ------ PRODUCTS ------ */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .product-card {
+            background: #1E3A52;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #19AFFF33;
+            text-align: center;
+            transition: 0.2s ease;
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px #19AFFF55;
+        }
+
+        /* ------ CONTACT ------ */
+        form input, form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #224d8e;
+            border: 1px solid #b20ec133;
+            border-radius: 6px;
+            color: white;
+        }
+
+        /* ------ FOOTER ------ */
+        footer {
+            background: #2a4598;
+            padding: 40px 10%;
+            text-align: center;
+            border-top: 1px solid #0a96d3ce;
+        }
+
+        /* ------ RESPONSIVE ------ */
+        @media screen and (max-width: 900px) {
+            #about {
+                flex-direction: column;
+            }
+            #about img {
+                width: 100%;
+            }
+            .tech-grid, .industries-grid, .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body> 
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="content">
+            <h1 class="neon">Powering the Future of Computing</h1>
+            <p style="max-width: 650px; margin: 20px auto;">
+                CSC develops advanced semiconductor solutions that enable next-generation performance.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn">Learn More</button>
+                <button class="btn">Contacts us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+        <div>
+            <h2 class="neon">Shaping Tomorrow’s Technology</h2>
+            <p>
+                At CSC, we focus on pushing the boundaries of semiconductor design, efficiency, 
+                and computational power. Our mission is to create scalable chip solutions that 
+                fuel innovation across industries worldwide.
+            </p>
+        </div>
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/36129979054101.5cb738896b02b.gif" alt="">
+    </section>
+
+    <!-- TECHNOLOGY -->
+    <section class="container">
+        <h2 class="neon">Our Technology</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <h3>Advanced Lithography</h3>
+                <p>
+                    Using state-of-the-art lithography techniques, CSC produces chips with 
+                    extreme precision and minimal energy loss.
+                </p>
+            </div>
+            <div class="tech-card">
+                <h3>High-Density Architecture</h3>
+                <p>
+                    Multi-layer structures enable higher compute density, increased thermal 
+                    stability, and superior scalability.
+                </p>
+            </div>
+            <div class="tech-card">
+                <h3>AI-Optimized Performance</h3>
+                <p>
+                    CSC chips accelerate workloads including AI, robotics, automation, 
+                    and edge computing.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="container">
+        <h2 class="neon">Industries We Serve</h2>
+        <div class="industries-grid">
+            <div class="industry-card">Automotive</div>
+            <div class="industry-card">Robotics</div>
+            <div class="industry-card">Cloud Computing</div>
+            <div class="industry-card">Medical Technology</div>
+            <div class="industry-card">Consumer Electronics</div>
+            <div class="industry-card">Aerospace</div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="container">
+        <h2 class="neon">Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://www.impulsa-empresa.es/wp-content/uploads/2022/04/PERTE-microchips-y-semiconductores.jpg">
+                <h3>CSC NanoCore X900</h3>
+                <p>High-performance chip for AI and edge devices.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.prod.website-files.com/60a3c1fc44c5715c395770e7/66431cc996193a10ea74e391_Types%20of%20Microchips.jpg">
+                <h3>CSC UltraStack R700</h3>
+                <p>High-density 3D stacked architecture.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://www.thoughtco.com/thmb/khHLwWbJszC3N3603jBHCg1fT9w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/microchip-5c424d634cedfd0001cc73f0.png">
+                <h3>CSC QuantumFlux M550</h3>
+                <p>Low-power design for mobile and IoT platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="container">
+        <h2 class="neon">Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Company">
+            <textarea rows="6" placeholder="Message"></textarea>
+            <button class="btn">Submit</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>CSC – Advanced Semiconductor Innovation</p>
+        <p>© 2026 CSC Technologies. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
